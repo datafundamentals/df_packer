@@ -4,3 +4,4 @@ metadata
 
 cookbook "packer"
 cookbook "docker" 
+cookbook "ark"
