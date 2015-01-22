@@ -1,0 +1,18 @@
+{
+	"builders": [
+	{
+		"type": "docker",
+		"image": "tutum/tomcat",
+		"export_path": "image.tar"
+		}],
+	"provisioners": [
+	{
+        "inline": [
+            "apt-get -y install curl"
+        ],
+        "type": "shell"
+    },
+	{
+		"type": "chef-solo"
+		}]
+}
