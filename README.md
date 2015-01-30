@@ -1,27 +1,14 @@
 # df_packer-cookbook
 
-TODO: Enter the cookbook description here.
+This cookbook downloads and installs version 0.7.5 of Packer onto an Ubuntu system. This is for an updated version over the community packer cookbook which is at 0.5.5
 
 ## Supported Platforms
 
-TODO: List your supported platforms.
+* Ubuntu-14.04 at the moment. 
 
 ## Attributes
 
-<table>
-  <tr>
-    <th>Key</th>
-    <th>Type</th>
-    <th>Description</th>
-    <th>Default</th>
-  </tr>
-  <tr>
-    <td><tt>['df_packer']['bacon']</tt></td>
-    <td>Boolean</td>
-    <td>whether to include bacon</td>
-    <td><tt>true</tt></td>
-  </tr>
-</table>
+Saving attributes for later versions
 
 ## Usage
 
@@ -39,4 +26,4 @@ Include `df_packer` in your node's `run_list`:
 
 ## License and Authors
 
-Author:: YOUR_NAME (<YOUR_EMAIL>)
+Author:: Jeff Carapetyan (<jeff@datafundamentals.com>)

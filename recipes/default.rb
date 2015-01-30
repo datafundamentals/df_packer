@@ -7,21 +7,15 @@
 # All rights reserved - Do Not Redistribute
 #
 
-# include_recipe "docker::default"
-
 apt_package "unzip" 
 
-ark "packer" do 
-	url "https://dl.bintray.com/mitchellh/packer/packer_0.7.5_linux_amd64.zip"
-	action :install
+remote_file "/tmp/packer_0.7.5_linux_amd64.zip" do 
+	source "https://dl.bintray.com/mitchellh/packer/packer_0.7.5_linux_amd64.zip"
+end
+execute "unzip packer_0.7.5_linux_amd64.zip -d /usr/local/bin" do 
+	cwd "tmp"
+	action :run
+	ignore_failure true
 end
 
-directory "/home/vagrant/packer_docker" do 
-	mode "0777" 
-	action :create
-	end
 
-template "/home/vagrant/packer_docker/template.json" do 
-	source "template.json.erb" 
-	action :create 
-end
